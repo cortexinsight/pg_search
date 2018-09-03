@@ -1,4 +1,5 @@
 require 'logger'
+require 'advisory_plugin_core'
 
 module PgSearch
   class Document < ActiveRecord::Base
