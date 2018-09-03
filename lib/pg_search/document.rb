@@ -7,6 +7,9 @@ module PgSearch
     self.table_name = 'pg_search_documents'
     belongs_to :searchable, :polymorphic => true
 
+    include MiliaModelHelper
+    add_tenant
+    
     # The logger might not have loaded yet.
     # https://github.com/Casecommons/pg_search/issues/26
     def self.logger
